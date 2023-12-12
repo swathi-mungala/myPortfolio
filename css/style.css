@@ -9,8 +9,6 @@ body {
   line-height: 1.5;
 }
 header {
-  /* background-color: grey;
-  color: white; */
   color: black;
 }
 /* Navigation CSS */
@@ -29,14 +27,7 @@ header {
   width: 30%;
   align-items: center;
   justify-content: space-between;
-  /* color: black; */
 }
-/* #navigation:hover:active {
-  font-weight: bold;
-  text-decoration: underline;
-  border-bottom:  ;
-} */
-
 #navigation a {
   cursor: pointer;
   text-decoration: none;
@@ -81,11 +72,70 @@ p {
 
 /* Main container styles */
 .page-section {
-  display: flex;
+  display: grid;
+  grid-template-columns: 10% 70%;
   justify-content: center;
   gap:2vw;
   padding-top: 1%;
+}
 
+.page-section h2 {
+  text-align: right;
+  padding-right:10px;
+}
+
+.page-content {
+  padding-left: 20px;
+  border-left: 2px solid black;
+}
+
+#contact .page-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+#work-images {
+  display: grid;
+  grid-template-rows: 300px 300px 300px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+  "project1 project1"
+  "project2 project3"
+  "project4 project4";
+}
+
+#project1 {
+  grid-area: project1;
+  background-image: url("../images/02-hero-bg.jpg");
+}
+#project2 {
+  grid-area: project2;
+  background-image: url("../images/02-portfolio-1.jpg");
+}
+#project3 {
+  grid-area: project3;
+  background-image: url("../images/02-portfolio-2.jpg");
+}
+#project4 {
+  grid-area: project4;
+  background-image: url("../images/Hero.jpg");
+}
+.projectGridArea {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px;
+  cursor: pointer;
+  display: grid;
+  align-content: end;
+}
+.heading {
+  background-color: rgba(0,0,0,0.7);
+    padding: 15px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 5px solid #FF6200;
 }
 .title{
   
@@ -95,25 +145,4 @@ p {
 .content{
   width:80vw;
   padding-top: 0.5%;
-}
-
-.main-img{
-display:flex;
-justify-content: center;
-
-}
-
-.main-img img{
-  width:580px;
-  height:80vh;
-}
-
-.img-row{
-  display:flex;
-  justify-content: center;
-  gap:2vw;
-}
-
-.img-row img{
-  height:170px;
 }
